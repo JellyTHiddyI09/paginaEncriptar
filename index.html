@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text Encoder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/helmet.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="imagenes/Logo.svg" alt="Alura">
+    </header>
+
+    <main class="esperanza">
+        <section class="container1">
+            <div class="mensaje">
+                <textarea name="mensaje" id="mensaje" class="mensajeEscrito" cols="30" rows="10"
+                    placeholder="Type your text here." onkeypress="return encriptaTexto(event);" required></textarea>
+
+
+
+                <div class="mayusculas">
+                    <img class="alert" src="imagenes/alert.svg" alt="Alert">
+                    <p>¡Sólo letras minúsculas, sin acentos!</p>
+                </div>
+                <div class="botones">
+                    <button class="botonEncriptar" type="button" onclick="mostrarOcultar();" value="ENCRIPTAR"
+                        id="encriptar" style="visibility: visible;"> ENCRIPTAR</button>
+                    <button class="boton-desencriptar" type="button" onclick="desencriptar()" value="Desencriptar"
+                        id="desencriptar" style="visibility: visible;"> Desencriptar </button>
+
+                </div>
+            </div>
+        </section>
+        <section class="output">
+            <div class="inner" id="interno">
+                <img class="nene" id="nene" src="imagenes/Muñeco.png" alt="Nene buscando">
+                <h3 class="textoPrincipal">"Ningún mensaje encontrado"</h3>
+                <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+
+            </div>
+
+            </div>
+            <div id="botonCopiar">
+                <div class="resultado" id="textoDesencriptado">
+                    <textarea class="salida" name="result" id="textoD" cols="30" rows="25"></textarea>
+                </div>
+                <button class="boton-copiar" type="button" id="copiar" onclick="copiar()" value="Copiar"
+                    style="visibility: visible;">Copiar</button>
+            </div>
+
+
+        </section>
+
+    </main>
+    <script src="funciones.js">
+
+    </script>
+</body>
+<footer class="pie">
+    All rights reserved 2023 - Irasema Quiebras Larios
+    <a href="https://www.linkedin.com/in/irasema-quiebras/"><img class="lin" src="imagenes/linkedin.png"
+            alt="linkedin link"> </a>
+</footer>
+
+</html>
